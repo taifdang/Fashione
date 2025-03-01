@@ -80,17 +80,23 @@ namespace eCommerce_API.Controllers
             var response = new Response();
             try
             {
-                var data = await _productService.GetAllPagination(currentPage, pageSize);
+                //var data = await _productService.GetAllPagination(currentPage, pageSize);
+                var data = await _productService.GetAll();
                 //fail
                 if(data == null) return Ok(new Response() { statusCode = 404, message = "not found data", data = null });
                 //success
                 //set infomation page
-                int totalItem = _productService.GetTotalProduct("");
-                int pageRanges = _productService.GetPageRanges(pageSize, totalItem);
+                //int totalItem = _productService.GetTotalProduct("");
+                //int pageRanges = _productService.GetPageRanges(pageSize, totalItem);
                 //response
                 response.statusCode = 200;
-                response.message = "success";   
-                response.data = new {data,pagination= new {totalItem,currentPage,pageRanges}};
+                response.message = "success";
+
+                //response.data = new {data,pagination= new {totalItem,currentPage,pageRanges}};
+                //###
+                var detail_data = list_pagination(data, currentPage, pageSize);
+                response.data = new { detail_data };
+
             }
             catch
             {
@@ -302,7 +308,17 @@ namespace eCommerce_API.Controllers
             }        
             return BadRequest();          
         }
+        [NonAction]
+        public object list_pagination(IQueryable<ProductDTO> products,int currentPage,int limit)
+        {
+            int total_item = products.Count();
+            int skip = (currentPage - 1) * limit;
+            int total_page = total_item % limit != 0 ? (total_item / limit) +1 :total_item/limit;
 
+            products = products.Skip(skip).Take(limit);
+
+            return new { products,pagination = new { total_item, limit, total_page } };
+        }
         #endregion ___________________________________________________________________________
     }
 }
