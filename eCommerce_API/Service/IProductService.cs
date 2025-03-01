@@ -8,7 +8,7 @@ namespace eCommerce_API.Service
         Task<IEnumerable<ProductDTO>> GetAll();
         Task<ProductDTO> GetId(int id);
         Task<IEnumerable<ProductDTO>> GetAllPagination(int currentPage,int pageSize);
-        Task<IEnumerable<ProductDTO>> GetCatePagination(int? id,int currentPage, int pageSize);
+       
         Task<IEnumerable<ProductDTO>> Search(string? keyword, int currentPage, int pageSize);
         Task Delete(int id);
         Task<Product> Add([FromForm]ProductImageDTO IproducDTO);

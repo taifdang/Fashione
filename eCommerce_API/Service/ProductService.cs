@@ -107,10 +107,10 @@ namespace eCommerce_API.Service
             return totalItem % pageSize > 0 ? totalItem / pageSize + 1 : totalItem / pageSize;
         }
         public int GetTotalProduct(string keyword)
-        {                     
-           return string.IsNullOrEmpty(keyword)
-                ? _databaseContext.Products.ToList().Count()
-                : _databaseContext.Products.Where(p => p.slug.Contains(VietnameseSign.RemoveSigns(keyword).ToLower())).Count();
+        {
+            return string.IsNullOrEmpty(keyword)
+                 ? _databaseContext.Products.ToList().Count()
+                 : _databaseContext.Products.Where(p => p.slug.Contains(VietnameseSign.RemoveSigns(keyword).ToLower())).Count();
         }
         public async Task<IEnumerable<ProductDTO>?> GetAllPagination(int currentPage, int pageSize)
         {
@@ -137,7 +137,7 @@ namespace eCommerce_API.Service
                 .Skip(skip)
                 .Take(pageSize)
                 .ToListAsync();
-            return data;         
+            return data;
         }
         public async Task<string> SaveImage(IFormFile file)
         {
@@ -216,13 +216,6 @@ namespace eCommerce_API.Service
            
 
         }
-
-        public Task<IEnumerable<ProductDTO>> GetCatePagination(int? id, int currentPage, int pageSize)
-        {
-            //var product = _databaseContext.
-            return null;
-        }
-
        
     }
 }

@@ -11348,11 +11348,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\taida\\Downloads\\Fashion-master\\Fashion-master\\eCommerce_API\\eCommerce_API.csproj",
+      "projectUniqueName": "C:\\Users\\taida\\OneDrive\\Documents\\Fashion\\eCommerce_API\\eCommerce_API.csproj",
       "projectName": "eCommerce_API",
-      "projectPath": "C:\\Users\\taida\\Downloads\\Fashion-master\\Fashion-master\\eCommerce_API\\eCommerce_API.csproj",
+      "projectPath": "C:\\Users\\taida\\OneDrive\\Documents\\Fashion\\eCommerce_API\\eCommerce_API.csproj",
       "packagesPath": "C:\\Users\\taida\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\taida\\Downloads\\Fashion-master\\Fashion-master\\eCommerce_API\\obj\\",
+      "outputPath": "C:\\Users\\taida\\OneDrive\\Documents\\Fashion\\eCommerce_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

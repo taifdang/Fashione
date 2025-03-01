@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RNdti3Y4Wnk=",
+  "dgSpecHash": "AVy4dRmyTn0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\taida\\Downloads\\Fashion-master\\Fashion-master\\eCommerce_API\\eCommerce_API.csproj",
+  "projectFilePath": "C:\\Users\\taida\\OneDrive\\Documents\\Fashion\\eCommerce_API\\eCommerce_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\taida\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\taida\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
